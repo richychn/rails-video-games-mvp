@@ -1,0 +1,43 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+a {
+  color: black;
+}
+
+a:hover {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.btn-black {
+  color: white;
+  background-color:black;
+}
+
+.btn-black:hover {
+  background-color: #999;
+  color:white;
+}
+
+.buttons {
+  margin-bottom: 30px;
+}
+
+.navbar {
+  box-shadow: 1px 1px 1px 1px #eee;
+}
+
+table {
+  margin-top: 30px;
+  tr {
+    height: 40px;
+  }
+  tr td:first-child {
+    padding-left: 20px;
+  }
+}

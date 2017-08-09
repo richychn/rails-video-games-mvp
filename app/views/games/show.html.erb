@@ -1,0 +1,27 @@
+<h1><%= @game.name %></h1>
+<h3>Category: <%= @game.category %></h3>
+<h5>Description: <%= @game.description ? @game.description : "not available" %></h5>
+<%= link_to "Back", games_path, class: "btn btn-black btn-sm" %>
+<%= link_to "Edit", edit_game_path(@game), class: "btn btn-black btn-sm" %>
+<%= link_to "Delete game", game_path(@game), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-black btn-sm" %>
+<h3>Reviews</h3>
+<%= link_to "Add Review", new_game_review_path(@game), class: "btn btn-black" %>
+
+<table class="table table-striped">
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><strong>Review</strong></td>
+    <td><strong>Date</strong></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <% @game.reviews.each do |review| %>
+    <tr>
+      <td><%= review.name %></td>
+      <td><%= review.content %></td>
+      <td><%= review.created_at %></td>
+      <td><%= link_to "Edit", edit_review_path, class: "btn btn-black btn-sm" %></td>
+      <td><%= link_to "Delete Review", review_path(review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-black btn-sm" %></td>
+    </tr>
+  <% end -%>
+</table>

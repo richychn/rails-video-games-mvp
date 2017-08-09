@@ -1,0 +1,7 @@
+<%= simple_form_for @game do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :category %>
+  <%= f.submit "Submit", class: "btn btn-black" %>
+  <%= link_to "Back", games_path, class: "btn btn-black" %>
+<% end -%>

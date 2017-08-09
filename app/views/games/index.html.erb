@@ -1,0 +1,17 @@
+<h1>Games</h1>
+<%= link_to "New Game", new_game_path, class: "btn btn-black" %>
+<table class="table table-striped">
+  <tr id="headers">
+    <td><strong>Name</strong></td>
+    <td><strong>Category</strong></td>
+    <td><strong>Description</strong></td>
+    <td></td>
+  </tr>
+<% @games.each do |game| %>
+  <tr>
+    <td><%= game.name %></td>
+    <td><%= game.category %></td>
+    <td><%= game.description %></td>
+    <td><%= link_to "More details", game_path(game), class: "btn btn-black btn-sm" %></td>
+  </tr>
+<% end -%>
